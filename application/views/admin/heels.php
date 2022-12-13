@@ -23,7 +23,7 @@
                 <td width="20px"><?= $no++ ?></td>
                 <td><?= $hls->id_heels ?></td>
                 <td><?= $hls->nama_heels ?></td>
-                <td>Rp. <?= $hls->harga ?></td>
+                <td>$ <?= $hls->harga ?></td>
                 <td width="20px"><?= anchor('admin/heels/update/' . $hls->id_heels, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div> ') ?>
                 <td width="20px" onclick="javascript: return confirm('Ready to Delete?')"><?= anchor('admin/heels/delete/' . $hls->id_heels, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div> ') ?>
 

@@ -91,10 +91,10 @@
                 <th>Email</th>
                 <th>Phone Number</th>
                 <th>Instagram</th>
-                <th>Model Name</th>
-                <th>Size</th>
+                <th>Model</th>
                 <th>Order Date</th>
                 <th>Price</th>
+                <th>Status</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -112,9 +112,9 @@
                     <td data-label="Phone Number"><?= $od->phone_number ?></td>
                     <td data-label="Instagram"><?= $od->instagram ?></td>
                     <td data-label="Model Name"><?= $od->nama_model ?></td>
-                    <td data-label="Size"><?= $od->size ?></td>
                     <td data-label="Order Date"><?= $od->order_date ?></td>
                     <td data-label="Price">Rp. <?= $od->harga ?></td>
+                    <td data-label="Status"><?= $od->status ?></td>
                     <td width="20px" data-label="Detail"><?= anchor('admin/order/detail/' . $od->id_order, '<div class="btn btn-sm btn-success"><i class="fa fa-search-plus"></i></div> ') ?> </td>
                     <td width="20px" data-label="Edit"><?= anchor('admin/order/edit/' . $od->id_order, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div> ') ?> </td>
                     <td width="20px" data-label="Delete" onclick="javascript: return confirm('Ready to Delete?')"><?= anchor('admin/order/delete/' . $od->id_order, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div> ') ?></td>

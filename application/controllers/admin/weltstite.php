@@ -12,7 +12,7 @@ class Weltstite extends CI_Controller
     public function index()
     {
         $data['weltstite'] = $this->weltstite_model->tampil_data()->result();
-        $data['title'] = 'Data weltstite';
+        $data['title'] = 'Data Welt Style';
         $this->load->view('templates_admin/header', $data);
         $this->load->view('templates_admin/sidebar', $data);
         $this->load->view('admin/weltstite', $data);
@@ -25,7 +25,7 @@ class Weltstite extends CI_Controller
             'nama_weltstite' => set_value('nama_weltstite'),
             'harga' => set_value('harga')
         );
-        $data['title'] = 'Input Welt Stite';
+        $data['title'] = 'Input Welt Style';
         $this->load->view('templates_admin/header', $data);
         $this->load->view('templates_admin/sidebar', $data);
         $this->load->view('admin/weltstite_form');
@@ -34,7 +34,7 @@ class Weltstite extends CI_Controller
     public function _rules()
     {
         $this->form_validation->set_rules('id_weltstite', 'ID Welt Stite', 'required|trim|is_unique[weltstite.id_weltstite]', [
-            'is_unique' => 'This ID Welt Stite has already inputed!'
+            'is_unique' => 'This ID Welt Style has already inputed!'
         ]);
         $this->form_validation->set_rules('nama_weltstite', 'Welt Stite Name', 'required');
         $this->form_validation->set_rules('harga', 'Price', 'required');
@@ -60,7 +60,7 @@ class Weltstite extends CI_Controller
     {
         $where = array('id_weltstite' => $id);
         $data['weltstite'] = $this->weltstite_model->edit_data($where, 'weltstite')->result();
-        $data['title'] = 'Update Welt Stite';
+        $data['title'] = 'Update Welt Style';
         $this->load->view('templates_admin/header', $data);
         $this->load->view('templates_admin/sidebar', $data);
         $this->load->view('admin/weltstite_update');

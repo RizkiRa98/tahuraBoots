@@ -34,6 +34,10 @@
         cursor: pointer;
     }
 
+    select.form-control {
+        -webkit-appearance: menulist;
+    }
+
     @media (min-width: 992px) {
         .container5 {
             margin: 50px auto;
@@ -64,36 +68,38 @@
 
 <div class="container5">
     <div class="row1">
+
         <h1 class="h3 text-gray-900 mt-6 text-center" style="font-family:viga;text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);">Order Form</h1>
+        <small class="text" style="font-size: 18px;">Fields With Sign(*) Must Be Filled In or Selected</small>
         <form method="post" action="<?php echo base_url('order/action_input') ?>" class="form-display" enctype="multipart/form-data">
             <div class="form-group">
-                <label>Name</label>
+                <label>Name*</label>
                 <input type="text" name="nama" placeholder="Input Your Name" class="form-control">
                 <?= form_error('nama', '<small class="text-danger pl-3">', '</small>');  ?>
             </div>
             <div class="form-group">
-                <label>Address</label>
+                <label>Address*</label>
                 <input type="text" name="address" placeholder="Input Your Address" class="form-control">
                 <?= form_error('address', '<small class="text-danger pl-3">', '</small>');  ?>
             </div>
             <div class="form-group">
-                <label>Email</label>
+                <label>Email*</label>
                 <input type="text" name="email" placeholder="Input Your Email" class="form-control">
                 <?= form_error('email', '<small class="text-danger pl-3">', '</small>');  ?>
             </div>
             <div class="form-group">
-                <label>Phone Number</label>
+                <label>Phone Number*</label>
                 <input type="text" name="phone_number" placeholder="Input Your Phone Number" class="form-control">
                 <?= form_error('phone_number', '<small class="text-danger pl-3">', '</small>');  ?>
             </div>
             <div class="form-group">
-                <label>Instragram</label>
-                <input type="text" name="instagram" placeholder="Input Your Name" class="form-control">
-                <?= form_error('instagram', '<small class="text-danger pl-3">', '</small>');  ?>
+                <label>Instragram(Optional)</label>
+                <input type="text" name="instagram" placeholder="Input Your Instagram" class="form-control">
+
             </div>
             <hr>
             <div class="form-group">
-                <label>Select Model</label>
+                <label>Select Model*</label>
                 <select id="nama_model" name="nama_model" onchange="changeValue()" class="form-control">
                     <option value="">---Select Model---</option>
                     <?php foreach ($model as $mdl) : ?>
@@ -106,7 +112,7 @@
             </div>
 
             <div class="form-group">
-                <label>Select Upper</label>
+                <label>Select Upper*</label>
                 <select id="nama_upper" name="nama_upper" class="form-control" onchange="changeValue()">
                     <option value="">---Select Upper---</option>
                     <?php foreach ($upper as $upr) : ?>
@@ -119,7 +125,7 @@
             </div>
 
             <div class="form-group">
-                <label>Select Lining</label>
+                <label>Select Lining*</label>
                 <select id="nama_lining" name="nama_lining" onchange="changeValue()" class="form-control">
                     <option value="">---Select Lining---</option>
                     <?php foreach ($lining as $lng) : ?>
@@ -132,7 +138,7 @@
             </div>
 
             <div class="form-group">
-                <label>Select Construction</label>
+                <label>Select Construction*</label>
                 <select id="nama_construction" name="nama_construction" onchange="changeValue()" class="form-control">
                     <option value="">---Select Construction---</option>
                     <?php foreach ($construction as $cns) : ?>
@@ -145,7 +151,7 @@
             </div>
 
             <div class="form-group">
-                <label>Select Outsole</label>
+                <label>Select Outsole*</label>
                 <select id="nama_outsole" name="nama_outsole" onchange="changeValue()" class="form-control">
                     <option value="">---Select Outsole---</option>
                     <?php foreach ($outsole as $osl) : ?>
@@ -158,7 +164,7 @@
             </div>
 
             <div class="form-group">
-                <label>Select Welt Colour</label>
+                <label>Select Welt Colour*</label>
                 <select id="nama_weltcolour" name="nama_weltcolour" onchange="changeValue()" class="form-control">
                     <option value="">---Select Welt Colour---</option>
                     <?php foreach ($weltcolour as $wc) : ?>
@@ -171,7 +177,7 @@
             </div>
 
             <div class="form-group">
-                <label>Select Edge Colour</label>
+                <label>Select Edge Colour*</label>
                 <select id="nama_edgecolour" name="nama_edgecolour" onchange="changeValue()" class="form-control">
                     <option value="">---Select Edge Colour---</option>
                     <?php foreach ($edgecolour as $ec) : ?>
@@ -183,7 +189,7 @@
                 <?= form_error('nama_edgecolour', '<small class="text-danger pl-3">', '</small>');  ?>
             </div>
             <div class="form-group">
-                <label>Select Welt Style</label>
+                <label>Select Welt Style*</label>
                 <select id="nama_weltstite" name="nama_weltstite" onchange="changeValue()" class="form-control">
                     <option value="">---Select Welt Style---</option>
                     <?php foreach ($weltstite as $ws) : ?>
@@ -192,10 +198,11 @@
                         </option>
                     <?php endforeach ?>
                 </select>
+                <?= form_error('nama_weltstite', '<small class="text-danger pl-3">', '</small>');  ?>
             </div>
 
             <div class="form-group">
-                <label>Select Toebox</label>
+                <label>Select Toebox*</label>
                 <select id="nama_toebox" name="nama_toebox" onchange="changeValue()" class="form-control">
                     <option value="">---Select Toebox---</option>
                     <?php foreach ($toebox as $tb) : ?>
@@ -208,7 +215,7 @@
             </div>
 
             <div class="form-group">
-                <label>Select Heels</label>
+                <label>Select Heels*</label>
                 <select id="nama_heels" name="nama_heels" onchange="changeValue()" class="form-control">
                     <option value="">---Select Heels---</option>
                     <?php foreach ($heels as $hs) : ?>
@@ -221,7 +228,7 @@
             </div>
 
             <div class="form-group">
-                <label>Select Size</label>
+                <label>Select Size*</label>
                 <select name="size" class="form-control">
                     <option value="">---Select Size---</option>
                     <option>35</option>
@@ -247,20 +254,20 @@
                 <label>Input Size Image (Optional)</label>
                 <input type="file" id="foto" name="foto" class="form-control">
             </div>
-            <!-- <div class="form-group">
-                <label>Worker :</label>
-                <input type="text" name="biaya_pegawai" placeholder="" onchange="changeValue()" class="form-control" readonly value="">
-            </div> -->
             <div class="form-group">
-                <label>Total Price :</label>
-                <input type="text" name="harga" placeholder="Rupiah" class="form-control" readonly value="">
+                <label>Worker(USD) :</label>
+                <input type="text" name="biaya_pegawai" placeholder="" class="form-control" readonly value="<?= $get_total; ?>">
+            </div>
+            <div class="form-group">
+                <label>Total Price(USD) :</label>
+                <input type="text" name="harga" placeholder="Dolar" class="form-control" readonly value="">
             </div>
             <br>
 
             <button type="submit" class="btn btn-primary mb-4" onclick="submit()">Submit</button>
             <br>
-            <small class="text-danger">*If price not appear please back to Home page first!</small><br>
-            <small class="text-danger">*Jika angka price tidak muncul harap kembali ke home page terlebih dahulu!</small>
+            <small class="text-danger" style="font-size: 18px;">*If price not appear please back to Home page first!</small><br>
+            <small class="text-danger" style="font-size: 18px;">*Jika angka price tidak muncul harap kembali ke home page terlebih dahulu!</small>
         </form>
     </div>
 </div>
@@ -287,6 +294,9 @@
         var value_weltstite = $("#nama_weltstite").val();
         var value_toebox = $("#nama_toebox").val();
         var value_heels = $("#nama_heels").val();
+        var value_worker = parseFloat(document.getElementsByName("biaya_pegawai")[0].value);
+        //var value_worker = $("#biaya_pegawai").val();
+        //alert(value_worker);
 
         var nama_mdl = value.split("/")[0];
         var harga_mdl = parseFloat(value.split("/")[1]);
@@ -343,8 +353,8 @@
         }
 
 
-        var tot_harga = 0 + size_mdl * (harga_upper + harga_lining) + harga_construction + harga_outsole + harga_weltcolour + harga_edgecolour + harga_weltstite + harga_heels;
-        // alert(harga_mdl);
+        var tot_harga = 0 + (size_mdl * (harga_upper + harga_lining)) + harga_construction + harga_outsole + harga_weltcolour + harga_edgecolour + harga_weltstite + harga_heels + value_worker;
+        //alert(value_worker);
         if (isNaN(tot_harga)) {
             document.getElementsByName("harga")[0].value = 0;
         } else {

@@ -20,7 +20,9 @@
 
         <?php
         $no = 1;
+        $sum = 0;
         foreach ($pegawai as $pgw) :
+            $sum += $pgw->upah;
         ?>
             <tr>
                 <td width="20px"><?= $no++ ?></td>
@@ -29,7 +31,7 @@
                 <td><?= $pgw->nama_pekerjaan ?></td>
                 <td>$<?= $pgw->upah ?></td>
 
-                <td width="20px"><?= anchor('admin/pegawai/read/' . $pgw->id_pegawai, '<div class="btn btn-sm btn-success"><i class="fa fa-search-plus"></i></div> ') ?>
+
                 <td width="20px"><?= anchor('admin/pegawai/update/' . $pgw->id_pegawai, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div> ') ?>
                 <td width="20px" onclick="javascript: return confirm('Ready to Delete?')"><?= anchor('admin/pegawai/delete/' . $pgw->id_pegawai, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div> ') ?>
 
@@ -38,6 +40,7 @@
         <?php endforeach; ?>
         <tr>
             <th colspan="3" style="text-align: end ;">TOTAL :</th>
+            <th style="text-align: left ;">$<?= $sum; ?></th>
         </tr>
     </table>
 </div>

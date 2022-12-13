@@ -23,7 +23,7 @@
                 <td width="20px"><?= $no++ ?></td>
                 <td><?= $cns->id_construction ?></td>
                 <td><?= $cns->nama_construction ?></td>
-                <td>Rp. <?= $cns->harga ?></td>
+                <td>$ <?= $cns->harga ?></td>
                 <td width="20px"><?= anchor('admin/construction/update/' . $cns->id_construction, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div> ') ?>
                 <td width="20px" onclick="javascript: return confirm('Ready to Delete?')"><?= anchor('admin/construction/delete/' . $cns->id_construction, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div> ') ?>
 

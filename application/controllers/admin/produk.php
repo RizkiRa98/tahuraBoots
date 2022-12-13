@@ -26,7 +26,7 @@ class Produk extends CI_Controller
             'detail' => set_value('detail'),
             'harga' => set_value('harga')
         );
-        $data['title'] = 'Input produk';
+        $data['title'] = 'Input Produk';
         $this->load->view('templates_admin/header', $data);
         $this->load->view('templates_admin/sidebar', $data);
         $this->load->view('admin/produk_form');
@@ -71,7 +71,7 @@ class Produk extends CI_Controller
     public function detail($id)
     {
         $data['detail'] = $this->produk_model->detail_produk($id);
-        $data['title'] = 'Detail produk';
+        $data['title'] = 'Detail Produk';
         $this->load->view('templates_admin/header', $data);
         $this->load->view('templates_admin/sidebar', $data);
         $this->load->view('admin/produk_detail');
@@ -81,7 +81,7 @@ class Produk extends CI_Controller
     {
         $where = array('id_produk' => $id);
         $data['produk'] = $this->produk_model->edit_produk($where, 'produk')->result();
-        $data['title'] = 'Edit roduk';
+        $data['title'] = 'Edit Produk';
         $this->load->view('templates_admin/header', $data);
         $this->load->view('templates_admin/sidebar', $data);
         $this->load->view('admin/produk_update');

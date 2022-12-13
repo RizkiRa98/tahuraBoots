@@ -14,7 +14,7 @@
 
             <div class="form-group">
                 <label>Detail Product</label>
-                <textarea type="textarea" name="detail" class="form-control" value="<?= $pdk->detail; ?>"></textarea>
+                <textarea" name="detail" class="form-control" value="<?= $pdk->detail; ?>"></textarea>
             </div>
 
             <div class="form-group">

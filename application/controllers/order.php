@@ -21,6 +21,8 @@ class Order extends CI_Controller
         $data['weltstite'] = $this->order_model->tampil_data('weltstite')->result();
         $data['toebox'] = $this->order_model->tampil_data('toebox')->result();
         $data['heels'] = $this->order_model->tampil_data('heels')->result();
+        $data['get_total'] = $this->pegawai_model->get_total();
+        //$data["get_total"] = "Hello";
         $this->load->view('templates_dashboard/header',);
         $this->load->view('dashboard/order', $data);
         $this->load->view('dashboard/dashboard');
@@ -34,14 +36,11 @@ class Order extends CI_Controller
         $this->form_validation->set_rules('address', 'Address', 'required', [
             'required' => 'Address must be filled!'
         ]);
-        $this->form_validation->set_rules('email', 'Email', 'required', [
+        $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email', [
             'required' => 'Email must be filled!'
         ]);
         $this->form_validation->set_rules('phone_number', 'Phone Number', 'required', [
             'required' => 'Phone number must be filled!'
-        ]);
-        $this->form_validation->set_rules('instagram', 'Instagram', 'required', [
-            'required' => 'Instagram must be filled!'
         ]);
         $this->form_validation->set_rules('instagram', 'Instagram', 'required', [
             'required' => 'Instagram must be filled!'
@@ -105,6 +104,8 @@ class Order extends CI_Controller
             $size     = $this->input->post('size');
             $order_date =  date("Y/m/d");
             $harga  = $this->input->post('harga');
+            $status = $this->input->post('status');
+            $biaya_pegawai = $this->input->post('biaya_pegawai');
             $foto = $_FILES['foto']['name'];
             if ($foto = '') {
             } else {
@@ -134,8 +135,10 @@ class Order extends CI_Controller
                 'nama_weltstite' => strtok($nama_weltstite, '/'),
                 'nama_toebox' => strtok($nama_toebox, '/'),
                 'nama_heels' => strtok($nama_heels, '/'),
+                'biaya_pegawai' => $biaya_pegawai,
                 'size' => $size,
                 'harga' => $harga,
+                'status' => "UNCONFIRMED",
                 'order_date' => $order_date,
                 'foto' => $foto
             );

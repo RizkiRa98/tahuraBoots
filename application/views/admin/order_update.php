@@ -151,6 +151,23 @@
                     <option <?php if ($od->size == "43") echo 'selected = selected' ?>>43</option>
                     <option <?php if ($od->size == "44") echo 'selected = selected' ?>>44</option>
                     <option <?php if ($od->size == "45") echo 'selected = selected' ?>>45</option>
+                    <option <?php if ($od->size == "46") echo 'selected = selected' ?>>46</option>
+                    <option <?php if ($od->size == "47") echo 'selected = selected' ?>>47</option>
+                    <option <?php if ($od->size == "48") echo 'selected = selected' ?>>48</option>
+                    <option <?php if ($od->size == "49") echo 'selected = selected' ?>>49</option>
+                    <option <?php if ($od->size == "50") echo 'selected = selected' ?>>50</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Worker :</label>
+                <input type="text" name="biaya_pegawai" placeholder="" class="form-control" readonly value="<?= $get_total; ?>">
+            </div>
+
+            <div class="form-group">
+                <label>Status :</label>
+                <select name="status" class="form-control">
+                    <option value="UNCONFIRMED">UNCONFIRMED</option>
+                    <option value="CONFIRMED">CONFIRMED</option>
                 </select>
             </div>
             <div class="form-group">
@@ -179,6 +196,8 @@
         var value_weltstite = document.getElementsByName("nama_weltstite")[0].value;
         var value_toebox = document.getElementsByName("nama_toebox")[0].value;
         var value_heels = document.getElementsByName("nama_heels")[0].value;
+        var value_worker = parseFloat(document.getElementsByName("biaya_pegawai")[0].value);
+
         var nama_mdl = value.split("/")[0];
         var harga_mdl = parseFloat(value.split("/")[1]);
         var size_mdl = parseFloat(value.split("/")[2]);
@@ -232,7 +251,7 @@
             harga_heels = 0;
         }
 
-        var tot_harga = 0 + size_mdl * (harga_upper + harga_lining) + harga_construction + harga_outsole + harga_weltcolour + harga_edgecolour + harga_weltstite + harga_heels;
+        var tot_harga = 0 + (size_mdl * (harga_upper + harga_lining)) + harga_construction + harga_outsole + harga_weltcolour + harga_edgecolour + harga_weltstite + harga_heels + value_worker;
         // alert(document.getElementsByName("size").value);
         if (isNaN(tot_harga)) {
             document.getElementsByName("harga")[0].value = 0;

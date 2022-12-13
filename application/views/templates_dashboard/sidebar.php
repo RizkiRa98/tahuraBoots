@@ -2,8 +2,9 @@
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1 class="display-4">A Comfortable <span>Shoes</span><br> Makes A <span>Journey</span> In Every Step</h1>
-        <a href="#" class="btn btn-success tombol">How To Order</a>
-        <a href="<?= base_url('order') ?>" class="btn btn-primary tombol">Order Here</a>
+        <a href="<?= base_url('dashboard/howto_order_en') ?>" class="btn btn-success tombol">How To Order</a>
+        <a href="<?= base_url('dashboard/howto_foot_en') ?>" class="btn btn-success tombol">How To Measure Foot Size</a><br><br>
+
         <?php
         echo $this->session->flashdata('message');
         $this->session->unset_userdata('message');

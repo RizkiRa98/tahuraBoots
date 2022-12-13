@@ -25,7 +25,7 @@
                 <td><?= $mdl->id_model ?></td>
                 <td><?= $mdl->nama_model ?></td>
                 <td><?= $mdl->size_model ?></td>
-                <td>Rp. <?= $mdl->harga ?></td>
+                <td>$ <?= $mdl->harga ?></td>
                 <td width="20px"><?= anchor('admin/model/update/' . $mdl->id_model, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div> ') ?>
                 <td width="20px" onclick="javascript: return confirm('Ready to Delete?')"><?= anchor('admin/model/delete/' . $mdl->id_model, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div> ') ?>
 

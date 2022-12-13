@@ -32,7 +32,7 @@ class Order extends CI_Controller
         $data['weltstite'] = $this->order_model->tampil_data('weltstite')->result();
         $data['toebox'] = $this->order_model->tampil_data('toebox')->result();
         $data['heels'] = $this->order_model->tampil_data('heels')->result();
-
+        $data['get_total'] = $this->pegawai_model->get_total();
 
         $where = array('id_order' => $id);
         $data['order'] = $this->order_admin_model->edit_order($where, 'order')->result();
@@ -58,6 +58,8 @@ class Order extends CI_Controller
         $nama_heels     = $this->input->post('nama_heels');
         $size     = $this->input->post('size');
         $harga  = $this->input->post('harga');
+        $status = $this->input->post('status');
+        $biaya_pegawai = $this->input->post('biaya_pegawai');
 
         $data = array(
             'address' => $address,
@@ -72,7 +74,9 @@ class Order extends CI_Controller
             'nama_toebox' => strtok($nama_toebox, '/'),
             'nama_heels' => strtok($nama_heels, '/'),
             'size' => $size,
-            'harga' => $harga
+            'harga' => $harga,
+            'biaya_pegawai' => $biaya_pegawai,
+            'status' => $status
         );
         $where = array(
             'id_order' => $id

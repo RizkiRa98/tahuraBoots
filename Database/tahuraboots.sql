@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 09 Okt 2021 pada 01.17
+-- Waktu pembuatan: 01 Feb 2022 pada 12.03
 -- Versi server: 10.4.18-MariaDB
 -- Versi PHP: 8.0.3
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `tb_company`
+-- Database: `tahuraboots`
 --
 
 -- --------------------------------------------------------
@@ -154,9 +154,10 @@ CREATE TABLE `model` (
 --
 
 INSERT INTO `model` (`id_model`, `nama_model`, `size_model`, `harga`) VALUES
-('CTS4', 'Carpastus 4', '4', '70000'),
-('CTS6', 'Carpatus 6 Inch', '6', '80000'),
-('CTS8', 'Carpatus 8 Inch', '8', '90000');
+('CTS10', 'Carpatus 10 ', '10', '0'),
+('CTS4', 'Carpastus 4 ', '4', '0'),
+('CTS6', 'Carpatus 6 ', '6', '0'),
+('CTS8', 'Carpatus 8', '8', '0');
 
 -- --------------------------------------------------------
 
@@ -184,17 +185,26 @@ CREATE TABLE `order` (
   `foto` varchar(100) NOT NULL,
   `order_date` date NOT NULL,
   `nama_heels` varchar(100) NOT NULL,
-  `harga` float NOT NULL,
-  `bayaran_pegawai` float NOT NULL
+  `harga` double NOT NULL,
+  `biaya_pegawai` double NOT NULL,
+  `status` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `order`
 --
 
-INSERT INTO `order` (`id_order`, `nama`, `address`, `email`, `phone_number`, `instagram`, `nama_model`, `size`, `nama_upper`, `nama_lining`, `nama_construction`, `nama_outsole`, `nama_weltcolour`, `nama_edgecolour`, `nama_weltstite`, `nama_toebox`, `foto`, `order_date`, `nama_heels`, `harga`, `bayaran_pegawai`) VALUES
-(47, 'Rizki Ramadhan', 'Bumi Asri Mekar Rahayu Blok 2 E 23', 'rizkiramadhan350@gmail.com', '081563965621', '@rzkrmdhn', 'Carpatus 6 Inch', '35', 'Shell No 6', 'Half Lining', 'Construction 1', 'Half Sole Super Grip Black', 'Welt Colour 1', 'Edge Colour 1', 'Welt Stite 1', 'Toebox 1', 'img9.jpg', '2021-10-05', 'Heels1', 180450, 0),
-(55, 'Dudung', 'Rumah dudung masa rumah soni', 'dudung@gmail.com', '12341231', '@dudung', 'Carpatus 6 Inch', '43', 'Shell No 8', 'Half Lining', 'Construction 1', 'Full Sole Super Grip Black', 'Welt Colour 1', 'Edge Colour 1', 'Welt Stite 1', 'Toebox 1', '242633430_282739860099378_8134502029585846057_n.jpg', '2021-10-07', 'Heels1', 1110000, 0);
+INSERT INTO `order` (`id_order`, `nama`, `address`, `email`, `phone_number`, `instagram`, `nama_model`, `size`, `nama_upper`, `nama_lining`, `nama_construction`, `nama_outsole`, `nama_weltcolour`, `nama_edgecolour`, `nama_weltstite`, `nama_toebox`, `foto`, `order_date`, `nama_heels`, `harga`, `biaya_pegawai`, `status`) VALUES
+(47, 'Rizki Ramadhan', 'Bumi Asri Mekar Rahayu Blok 2 E 23', 'rizkiramadhan350@gmail.com', '081563965621', '@rzkrmdhn', 'Carpatus 6 Inch', '35', 'Shell No 6', 'Full Lining', 'Construction 1', 'Full Sole Super Grip Black', 'Welt Colour 1', 'Edge Colour 1', 'Welt Stite 1', 'Toebox 1', 'img9.jpg', '2021-10-05', 'Heels1', 690000, 18, 'UNCONFIRMED'),
+(55, 'Dudung', 'Rumah dudung masa rumah soni', 'dudung@gmail.com', '12341231', '@dudung', 'Carpatus 6 Inch', '43', 'Shell No 8', 'Half Lining', 'Construction 1', 'Full Sole Super Grip Black', 'Welt Colour 1', 'Edge Colour 1', 'Welt Stite 1', 'Toebox 1', '242633430_282739860099378_8134502029585846057_n.jpg', '2021-10-07', 'Heels1', 1110000, 0, 'CONFIRMED'),
+(56, 'test', 'test', 'test@gmail.com', '09812837491', '@test', 'Carpatus 6 Inch', '47', 'Shell No 8', 'Half Lining', 'Construction 1', 'Full Sole Super Grip Black', 'Welt Colour 1', 'Edge Colour 1', 'Welt Stite 1', 'Toebox 1', '', '2022-01-25', 'Heels1', 1110018, 18, 'UNCONFIRMED'),
+(58, 'test', 'test1234', 'test1234@gmail.com', '008382148', '@test1234', 'Carpastus 4', '35', 'Shell No 8', 'Half Lining', 'Construction 1', 'Full Sole Super Grip Black', 'Welt Colour 1', 'Edge Colour 1', 'Welt Stite 1', 'Toebox 1', '', '2022-01-25', 'Heels1', 900018, 18, 'UNCONFIRMED'),
+(59, 'test321', 'tesaet', 'tsaet@gmail.com', '08831298749', '@test1234', 'Carpastus 4', '50', 'Shell No 8', 'Full Lining', 'Construction 1', 'Full Sole Super Grip Black', 'Welt Colour 1', 'Edge Colour 1', 'Welt Stite 1', 'Toebox 1', '', '2022-01-25', 'Heels1', 920018, 18, 'UNCONFIRMED'),
+(60, 'kasjdwadkj', 'dawkjdwadi', 'asdkajdw@gmail.com', '09123841', '@asdkjwak', 'Carpatus 8', '47', 'Shell No 8', 'Half Lining', 'Construction 1', 'Full Sole Super Grip Black', 'Welt Colour 1', 'Edge Colour 1', 'Welt Stite 1', 'Toebox 1', '', '2022-01-25', 'Heels1', 1320018, 18, 'UNCONFIRMED'),
+(61, 'Fajar', 'Karawang', 'fajar@gmail.com', '0938845191', '@fajar', 'Carpatus 8', '48', 'Shell No 6', 'Half Lining', 'Construction 1', 'Half Sole Super Grip Black', 'Welt Colour 1', 'Edge Colour 1', 'Welt Stite 1', 'Toebox 1', '', '2022-01-25', 'Heels1', 690020, 20, 'CONFIRMED'),
+(63, 'Rizki Ramadhan', 'Bumi Asri Mekar Rahayu Blok 2 E 23', 'rizkiramadhan350@gmail.com', '081563965621', '@rzkrmdhn', 'Carpatus 10 ', '46', 'Shell No 6', 'Full Lining', 'Construction 1', 'Full Sole Super Grip Black', 'Welt Colour 1', 'Edge Colour 1', 'Welt Stite 1', 'Toebox 1', '', '2022-01-25', 'Heels1', 830014, 14, 'UNCONFIRMED'),
+(65, 'test', 'test', 'test@gmail.com', '081563965621', '@rzkrmdhn', 'Carpastus 4 ', '48', 'Shell No 6', 'Full Lining', 'Construction 1', 'Full Sole Super Grip Black', 'Welt Colour 1', 'Edge Colour 1', 'Welt Stite 1', 'Toebox 1', '', '2022-01-31', 'Heels1', 620014, 14, 'UNCONFIRMED'),
+(66, 'Rizki Ramadhan', 'Bumi Asri Mekar Rahayu Blok 2 E 23', 'rizkiramadhan350@gmail.com', '081563965621', '@rzkrmdhn', 'Carpatus 10 ', '45', 'Shell No 6', 'Full Lining', 'Construction 1', 'Full Sole Super Grip Black', 'Welt Colour 1', 'Edge Colour 1', 'Welt Stite 1', 'Toebox 1', '', '2022-01-31', 'Heels1', 0, 14, 'UNCONFIRMED');
 
 -- --------------------------------------------------------
 
@@ -225,18 +235,19 @@ INSERT INTO `outsole` (`id_outsole`, `nama_outsole`, `harga`) VALUES
 CREATE TABLE `pegawai` (
   `id_pegawai` int(11) NOT NULL,
   `nama_pegawai` varchar(100) NOT NULL,
-  `upper` float NOT NULL,
-  `finishing` float NOT NULL,
-  `umum` float NOT NULL,
-  `total` float NOT NULL
+  `nama_pekerjaan` varchar(11) NOT NULL,
+  `upah` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `pegawai`
 --
 
-INSERT INTO `pegawai` (`id_pegawai`, `nama_pegawai`, `upper`, `finishing`, `umum`, `total`) VALUES
-(1, 'Soni', 20000, 50000, 10000, 100000);
+INSERT INTO `pegawai` (`id_pegawai`, `nama_pegawai`, `nama_pekerjaan`, `upah`) VALUES
+(1, 'Soni', 'Finishing', 5),
+(6, 'Udin', 'Upper', 5),
+(7, 'Soni', 'Umum', 3),
+(9, 'Dodi', 'Umum', 1);
 
 -- --------------------------------------------------------
 
@@ -258,9 +269,7 @@ CREATE TABLE `produk` (
 
 INSERT INTO `produk` (`id_produk`, `nama_produk`, `detail`, `foto`, `harga`) VALUES
 ('img2', 'sepatu 2', 'ini adalah sepatu 2', 'img5.jpg', '500.000'),
-('img3', 'sepatu 3', 'ini adalah sepatu 3', 'img6.jpg', '500.000'),
-('img5', 'Sepatu 5', 'Ini adalah sepatu ke 5', 'img81.jpg', '600.000'),
-('img6', 'Sepatu 6', 'Ini adalah sepatu ke 6', 'img102.jpg', '800000');
+('img3', 'sepatu 3', 'ini adalah sepatu 3', 'img6.jpg', '500.000');
 
 -- --------------------------------------------------------
 
@@ -322,7 +331,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `password`, `role_id`, `is_active`, `date_created`) VALUES
-(2, 'Rizki Ramadhan', 'rizkiramadhan350@gmail.com', '$2y$10$RLS5InFP63I1/aI47YWE0uPdLxl5jcSu9vPnuebntVonqf2.JHTLe', 1, 1, 1632239411);
+(2, 'Rizki Ramadhan', 'rizkiramadhan350@gmail.com', '$2y$10$RLS5InFP63I1/aI47YWE0uPdLxl5jcSu9vPnuebntVonqf2.JHTLe', 1, 1, 1632239411),
+(4, 'Doddy', 'doddy@gmail.com', '$2y$10$COhuVrfrRMa1Ny4hp0DqquFlEGyJ965cyCnCQWOsra9Yofte8dyye', 2, 1, 1643112413);
 
 -- --------------------------------------------------------
 
@@ -340,7 +350,8 @@ CREATE TABLE `user_role` (
 --
 
 INSERT INTO `user_role` (`id`, `role`) VALUES
-(1, 'admin');
+(1, 'admin'),
+(2, 'owner');
 
 -- --------------------------------------------------------
 
@@ -488,25 +499,25 @@ ALTER TABLE `weltstite`
 -- AUTO_INCREMENT untuk tabel `order`
 --
 ALTER TABLE `order`
-  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT untuk tabel `pegawai`
 --
 ALTER TABLE `pegawai`
-  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `user_role`
 --
 ALTER TABLE `user_role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

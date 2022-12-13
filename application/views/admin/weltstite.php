@@ -9,8 +9,8 @@
     <table class="table table-bordered table-stripped table-hover">
         <tr>
             <th>NO</th>
-            <th>ID Welt Stite</th>
-            <th>Welt Stite Name</th>
+            <th>ID Welt Style</th>
+            <th>Welt Style Name</th>
             <th>Price</th>
             <th colspan="2">Action</th>
         </tr>
@@ -23,7 +23,7 @@
                 <td width="20px"><?= $no++ ?></td>
                 <td><?= $ws->id_weltstite ?></td>
                 <td><?= $ws->nama_weltstite ?></td>
-                <td>Rp. <?= $ws->harga ?></td>
+                <td>$ <?= $ws->harga ?></td>
                 <td width="20px"><?= anchor('admin/weltstite/update/' . $ws->id_weltstite, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div> ') ?>
                 <td width="20px" onclick="javascript: return confirm('Ready to Delete?')"><?= anchor('admin/weltstite/delete/' . $ws->id_weltstite, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div> ') ?>
 

@@ -60,7 +60,7 @@ class Leather extends CI_Controller
     {
         $where = array('id_leather' => $id);
         $data['leather'] = $this->leather_model->edit_data($where, 'leather')->result();
-        $data['title'] = 'Update Model';
+        $data['title'] = 'Update Leather Sole';
         $this->load->view('templates_admin/header', $data);
         $this->load->view('templates_admin/sidebar', $data);
         $this->load->view('admin/leather_update');

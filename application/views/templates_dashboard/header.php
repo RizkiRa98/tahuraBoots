@@ -234,6 +234,12 @@
             padding-right: 8px;
         }
 
+        @media (max-width: 576px) {
+            .tombol {
+                margin-bottom: 20px;
+            }
+        }
+
         /* DESKTOP VERSION   */
         @media (min-width: 992px) {
 
@@ -286,6 +292,7 @@
 
 
 
+
         }
     </style>
 
@@ -305,6 +312,8 @@
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link active" aria-current="page" href="<?= base_url('dashboard') ?>">Home</a>
                     <a class="nav-link" href="<?= base_url('dashboard/produk') ?>">Product</a>
+                    <a class="nav-link" href="<?= base_url('order') ?>">Order</a>
+
                 </div>
             </div>
         </div>

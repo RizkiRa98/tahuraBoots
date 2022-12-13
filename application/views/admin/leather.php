@@ -23,7 +23,7 @@
                 <td width="20px"><?= $no++ ?></td>
                 <td><?= $ltr->id_leather ?></td>
                 <td><?= $ltr->nama_leather ?></td>
-                <td>Rp. <?= $ltr->harga ?></td>
+                <td>$ <?= $ltr->harga ?></td>
                 <td width="20px"><?= anchor('admin/leather/update/' . $ltr->id_leather, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div> ') ?>
                 <td width="20px" onclick="javascript: return confirm('Ready to Delete?')"><?= anchor('admin/leather/delete/' . $ltr->id_leather, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div> ') ?>
 

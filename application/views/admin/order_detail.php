@@ -96,6 +96,10 @@
                 <td><?php echo $od->nama_heels; ?></td>
             </tr>
 
+            <tr>
+                <td>Size</td>
+                <td><?php echo $od->size; ?></td>
+            </tr>
         <?php endforeach ?>
     </table>
 

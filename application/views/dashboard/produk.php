@@ -1,4 +1,9 @@
 <style>
+    .workingspace {
+        margin-top: 120px;
+        text-align: center;
+    }
+
     .row {
         margin: 50px auto;
         max-width: 1000px;
@@ -15,10 +20,8 @@
     }
 
     .tombol {
-        align-content: center;
-        margin: auto;
-        text-align: center;
-        max-width: 80%;
+        margin: 50px auto;
+        max-width: 70%;
     }
 
     .card span {
@@ -28,7 +31,7 @@
         padding-right: 8px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 576px) {
 
         .card {
             border-radius: 10px;
@@ -66,6 +69,7 @@
             </div>
 
         <?php endforeach; ?>
+
         <a href="<?= base_url('order') ?>" class="btn btn-danger tombol">Order Here</a>
     </div>
     <!-- end cards -->

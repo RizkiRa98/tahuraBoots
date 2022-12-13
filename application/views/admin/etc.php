@@ -23,7 +23,7 @@
                 <td width="20px"><?= $no++ ?></td>
                 <td><?= $et->id_etc ?></td>
                 <td><?= $et->nama_etc ?></td>
-                <td>Rp. <?= $et->harga ?></td>
+                <td>$ <?= $et->harga ?></td>
                 <td width="20px"><?= anchor('admin/etc/update/' . $et->id_etc, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div> ') ?>
                 <td width="20px" onclick="javascript: return confirm('Ready to Delete?')"><?= anchor('admin/etc/delete/' . $et->id_etc, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div> ') ?>
 

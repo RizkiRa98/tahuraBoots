@@ -23,7 +23,7 @@
                 <td width="20px"><?= $no++ ?></td>
                 <td><?= $lng->id_lining ?></td>
                 <td><?= $lng->nama_lining ?></td>
-                <td>Rp. <?= $lng->harga ?></td>
+                <td>$ <?= $lng->harga ?></td>
                 <td width="20px"><?= anchor('admin/lining/update/' . $lng->id_lining, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div> ') ?>
                 <td width="20px" onclick="javascript: return confirm('Ready to Delete?')"><?= anchor('admin/lining/delete/' . $lng->id_lining, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div> ') ?>
 

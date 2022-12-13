@@ -23,7 +23,7 @@
                 <td width="20px"><?= $no++ ?></td>
                 <td><?= $ec->id_edgecolour ?></td>
                 <td><?= $ec->nama_edgecolour ?></td>
-                <td>Rp. <?= $ec->harga ?></td>
+                <td>$ <?= $ec->harga ?></td>
                 <td width="20px"><?= anchor('admin/edgecolour/update/' . $ec->id_edgecolour, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div> ') ?>
                 <td width="20px" onclick="javascript: return confirm('Ready to Delete?')"><?= anchor('admin/edgecolour/delete/' . $ec->id_edgecolour, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div> ') ?>
 

@@ -4,23 +4,20 @@
         <div class="form-group">
             <label> Nama Pegawai</label>
             <input type="text" name="nama_pegawai" placeholder="Input Nama Pegawai" class="form-control" value="<?= $nama_pegawai ?>">
+            <?= form_error('nama_pegawai', '<small class="text-danger pl-3">', '</small>');  ?>
 
         </div>
 
         <div class="form-group">
             <label>Nama Pekerjaan</label>
-            <select name="nama_pekerjaan" id="nama_pekerjaan" class="form-control">
-                <option value="">---Select Pekerjaan---</option>
-                <option>Upper</option>
-                <option>Finishing</option>
-                <option>Assembling</option>
-                <option>Umum</option>
-            </select>
+            <input type="text" name="nama_pekerjaan" id="nama_pekerjaan" placeholder="Input Nama Pekerjaan" class="form-control">
+            <?= form_error('nama_pekerjaan', '<small class="text-danger pl-3">', '</small>');  ?>
         </div>
 
         <div class="form-group">
-            <label> Upah Pekerjaan</label>
-            <input type="text" name="upah" id="upah" placeholder="Input Upah Pekerjaan" class="form-control" value="$">
+            <label> Upah Pekerjaan(USD)</label>
+            <input type="text" name="upah" id="upah" placeholder="Input Upah Pekerjaan ($)" class="form-control">
+            <?= form_error('upah', '<small class="text-danger pl-3">', '</small>');  ?>
         </div>
 
         <button type="submit" class="btn btn-primary" id="save" name="save">Save</button>

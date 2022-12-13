@@ -22,5 +22,4 @@
 
 </head>
 
-<body class="bg-gradient" style="background: rgb(50,50,51);
-background: linear-gradient(180deg, rgba(50,50,51,1) 0%, rgba(136,117,110,1) 45%, rgba(154,43,64,1) 100%);">
+<body class="bg-gradient" style="background: #864741">

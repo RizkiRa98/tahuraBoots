@@ -76,7 +76,7 @@
                         <a class="collapse-item" href="<?= base_url('admin/construction'); ?>">Construction</a>
                         <a class="collapse-item" href="<?= base_url('admin/weltcolour'); ?>">Welt Colour</a>
                         <a class="collapse-item" href="<?= base_url('admin/edgecolour'); ?>">Edge Colour</a>
-                        <a class="collapse-item" href="<?= base_url('admin/weltstite'); ?>">Welt Stite</a>
+                        <a class="collapse-item" href="<?= base_url('admin/weltstite'); ?>">Welt Style</a>
                         <a class="collapse-item" href="<?= base_url('admin/toebox'); ?>">Toebox</a>
                         <a class="collapse-item" href="<?= base_url('admin/etc'); ?>">Etc</a>
                     </div>

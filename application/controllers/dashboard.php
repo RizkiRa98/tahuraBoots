@@ -18,4 +18,32 @@ class Dashboard extends CI_Controller
         $this->load->view('dashboard/dashboard');
         $this->load->view('templates_dashboard/footer');
     }
+    public function howto_order_en()
+    {
+        $this->load->view('templates_dashboard/header',);
+        $this->load->view('dashboard/howto_order_en');
+        $this->load->view('dashboard/dashboard');
+        $this->load->view('templates_dashboard/footer');
+    }
+    public function howto_order_id()
+    {
+        $this->load->view('templates_dashboard/header',);
+        $this->load->view('dashboard/howto_order_id');
+        $this->load->view('dashboard/dashboard');
+        $this->load->view('templates_dashboard/footer');
+    }
+    public function howto_foot_en()
+    {
+        $this->load->view('templates_dashboard/header',);
+        $this->load->view('dashboard/howto_foot_en');
+        $this->load->view('dashboard/dashboard');
+        $this->load->view('templates_dashboard/footer');
+    }
+    public function howto_foot_id()
+    {
+        $this->load->view('templates_dashboard/header',);
+        $this->load->view('dashboard/howto_foot_id');
+        $this->load->view('dashboard/dashboard');
+        $this->load->view('templates_dashboard/footer');
+    }
 }

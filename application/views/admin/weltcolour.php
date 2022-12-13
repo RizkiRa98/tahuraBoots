@@ -23,7 +23,7 @@
                 <td width="20px"><?= $no++ ?></td>
                 <td><?= $wc->id_weltcolour ?></td>
                 <td><?= $wc->nama_weltcolour ?></td>
-                <td>Rp. <?= $wc->harga ?></td>
+                <td>$ <?= $wc->harga ?></td>
                 <td width="20px"><?= anchor('admin/weltcolour/update/' . $wc->id_weltcolour, '<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div> ') ?>
                 <td width="20px" onclick="javascript: return confirm('Ready to Delete?')"><?= anchor('admin/weltcolour/delete/' . $wc->id_weltcolour, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div> ') ?>
 
